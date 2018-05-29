@@ -4,8 +4,8 @@
 # Base instructions from https://lowendtalk.com/discussion/92207/airtime-installation-new-2016-tutorial
 # Exhaustive Dependency Link Compilation by Amy of AmyOnTheRadio.com for Borealis/Deep Talk
 
-# First get git
-apt-get install git
+# First get git and wget
+sudo apt-get install git wget -y
 
 # Then clone Airtime
 git clone https://github.com/sourcefabric/Airtime.git
@@ -14,11 +14,14 @@ git clone https://github.com/sourcefabric/Airtime.git
 wget https://github.com/sourcefabric/Airtime/archive/airtime-2.5.2.1.tar.gz
 
 #Install PostgreSQL
-apt-get install postgresql postgresql-contrib
+sudo apt-get install postgresql postgresql-contrib -y
 
 #Time to Install the Hellacious List of Dependencies!
 
 #Master List of Airtime Dependencies & Their Dependencies
+
+mkdir dependencies
+cd dependencies
 
 wget http://security.debian.org/debian-security/pool/updates/main/p/php5/php5-curl_5.6.33+dfsg-0+deb8u1_amd64.deb
 wget http://ftp.us.debian.org/debian/pool/main/g/glibc/libc6_2.19-18+deb8u10_amd64.deb
@@ -170,7 +173,7 @@ wget http://ftp.us.debian.org/debian/pool/main/libu/libunwind/libunwind7_0.99-0.
 
 #Install all debs in folder and their dependencies recursively
 
-sudo dpkg -R --install dependencies/
+sudo dpkg -R --install *
 
 #Once completed: If you're already in the Airtime folder, if not, sudo ~/airtime-2.5.2.1/install -fiap
 
