@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env sh
 
 # This is a feeble attempt at fixing the Airtime installer. Bear with me here.
 # Base instructions from https://lowendtalk.com/discussion/92207/airtime-installation-new-2016-tutorial
@@ -174,12 +174,12 @@ sudo dpkg -R --install dependencies/
 
 #Once completed: If you're already in the Airtime folder, if not, sudo ~/airtime-2.5.2.1/install -fiap
 
-sudo ./install -fiap
+###sudo ./install -fiap
 
 #Open your browser to your ip or domain, no special ports needed, and follow the instructions. Follow all the details from airtime installation, it is pretty forward! You probably will se an error in the end, stating that some services are not running. Just rerun those services following those commands:
 
-service airtime-media-monitor start
-service airtime-liquidsoap restart
-service airtime-playout restart
+###service airtime-media-monitor start
+###service airtime-liquidsoap restart
+###service airtime-playout restart
 
-#There is no statement about the default login and password for your server. Enter in both fields “admin” and when logged in, don’t forget to change the values
+#There is no statement about the default login and password for your server. Enter in both fields ï¿½adminï¿½ and when logged in, donï¿½t forget to change the values
