@@ -144,7 +144,7 @@ wget http://security.debian.org/debian-security/pool/updates/main/p/php5/php5-gd
 wget http://ftp.us.debian.org/debian/pool/main/f/freetype/libfreetype6_2.5.2-3+deb8u2_amd64.deb
 wget http://ftp.us.debian.org/debian/pool/main/libp/libpng/libpng12-0_1.2.50-2+deb8u3_amd64.deb
 wget http://ftp.us.debian.org/debian/pool/main/libg/libgd2/libgd3_2.1.0-5+deb8u11_amd64.deb
-wget https://packages.debian.org/jessie/amd64/libfontconfig1/download
+#wget https://packages.debian.org/jessie/amd64/libfontconfig1/download
 wget http://ftp.us.debian.org/debian/pool/main/f/fontconfig/fontconfig-config_2.11.0-6.3+deb8u1_all.deb
 wget http://ftp.us.debian.org/debian/pool/main/f/fonts-dejavu/fonts-dejavu-core_2.34-1_all.deb
 wget http://ftp.us.debian.org/debian/pool/main/t/ttf-bitstream-vera/ttf-bitstream-vera_1.10-8_all.deb
@@ -173,7 +173,7 @@ wget http://ftp.us.debian.org/debian/pool/main/libu/libunwind/libunwind7_0.99-0.
 
 #Install all debs in folder and their dependencies recursively
 
-sudo dpkg -R --install *
+###sudo dpkg -R --install *
 
 #Once completed: If you're already in the Airtime folder, if not, sudo ~/airtime-2.5.2.1/install -fiap
 
