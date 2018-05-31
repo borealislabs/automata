@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 echo "#######################################"
-echo "Just hit enter or Y all the way through"
+echo "Just hit [ENTER] or Y all the way through"
 echo "Hit enter to start."
 echo "#######################################"
 read rokskwjk
@@ -15,16 +15,14 @@ sudo apt-get install mp3gain -y
 
 git clone https://github.com/borealislabs/Airtime-2.5.x-modded.git
 cd Airtime-2.5.x-modded
-./install -fiap
+sudo ./install -fiap
 cd ..
 sudo rm -fr Airtime-2.5.x-modded
 
-cd /etc/init.d
-sudo chmod +x airtime-*
+sudo chmod +x /etc/init.d/airtime-*
 
-#echo "################################"
-#echo "Gonna reboot! Hit enter!"
-#echo "################################"
-#read rokskwjk
-#reboot
-./restartservices.sh
+echo "################################"
+echo "Gonna reboot! Hit enter!"
+echo "################################"
+read rokskwjk
+reboot
