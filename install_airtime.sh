@@ -5,7 +5,6 @@ echo "Hit enter to start."
 echo "#######################################"
 read rokskwjk
 
-
 sudo add-apt-repository ppa:ondrej/php
 sudo add-apt-repository ppa:flexiondotorg/audio
 sudo apt-get update
@@ -13,13 +12,19 @@ sudo apt-get install php5.6 php5.6-bcmath -y
 sudo a2dismod php7.2 ; sudo a2enmod php5.6 ; sudo service apache2 restart
 sudo update-alternatives --set php /usr/bin/php5.6
 sudo apt-get install mp3gain -y
-git clone https://github.com/jamesshane/Airtime-2.5.x-Ubuntu-17.10.git
-cd Airtime-2.5.x-Ubuntu-17.10
-sudo bash ./install -fiap
+
+git clone https://github.com/borealislabs/Airtime-2.5.x-modded.git
+cd Airtime-2.5.x-modded
+./install -fiap
+cd ..
+sudo rm -fr Airtime-2.5.x-modded
+
 cd /etc/init.d
 sudo chmod +x airtime-*
-echo "################################"
-echo "Gonna reboot! Hit enter!"
-echo "################################"
-read rokskwjk
-reboot
+
+#echo "################################"
+#echo "Gonna reboot! Hit enter!"
+#echo "################################"
+#read rokskwjk
+#reboot
+./restartservices.sh
